@@ -3,16 +3,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <head>
         <meta charset="utf-8">
-        
-        <script src="https://unpkg.com/feather-icons"></script>
-        <script src='https://unpkg.com/tesseract.js@v2.0.0-alpha.3/dist/tesseract.min.js'></script>
+        <script src="https://cdn.rawgit.com/naptha/tesseract.js/0.2.0/dist/tesseract.js"></script>
 
         <script type="text/javascript" src="js/main.js"></script>
-        
+
         <link rel="stylesheet" type="text/css" href="css/main.css" />
     </head>
     <body>
-        <input type="file" accept="image/*" capture="camera" />
+        <input type="file" placeholder="Image URL" id="url" accept="image/*" capture="camera" />
+        <input type="button" id="go_button" value="Run" />
+        <div id="ocr_results"> </div>
+        <div id="ocr_status"> </div>
+
+        <script>
+            function runOCR() {
+                Tesseract.recognize(document.getElementById("url").files[0])
+                    .then(function(result) {
+                        document.getElementById("ocr_results")
+                                .innerText = result.text;
+                    }).progress(function(result) {
+                        document.getElementById("ocr_status")
+                                .innerText = result["status"] + " (" +
+                                    (result["progress"] * 100) + "%)";
+                    });
+            }
+            document.getElementById("go_button")
+            .addEventListener("click", function(e) {
+                runOCR();
+            });
+        </script>
     </body>
     
 </html>

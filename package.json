@@ -11,8 +11,7 @@
     "start": "node index.js",
     "deploy": "gh-pages -d /"
   },
-  "keywords": [
-  ],
+  "keywords": [],
   "author": "porter libby",
   "license": "ISC",
   "dependencies": {
@@ -22,8 +21,7 @@
     "install": "^0.12.2",
     "jsonfile": "^5.0.0",
     "nodemon": "^1.18.9",
-    "npm": "^6.7.0",
-    "serve-favicon": "^2.5.0"
+    "npm": "^6.7.0"
   },
   "devDependencies": {
     "eslint": "^5.13.0"
