@@ -1,6 +1,29 @@
 @import url('https://fonts.googleapis.com/css?family=Bangers');
+*   {
+    margin:0;
+    padding:0;
+    font-size: 0;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+h1{
+    font-size: 30px;
+    color: white;
+    font-family: 'Bangers', cursive;
+    margin-top: -50px;
+    margin-left: 50px;
+}
+h2{
+    font-size: 15px;
+    color: white;
+    font-family: 'Bangers', cursive;
+    margin-left: 50px;
+}
 body{
     background-color: #333;
+    height: 100%;
 }
 button {
     all: unset;
@@ -49,6 +72,11 @@ a {
     background-color: none;
     cursor: pointer;
     color: white;
+    border: 1px solid white;
+    padding: 5px;
+    padding-left: 10px;
+    padding-right: 15px;
+    border-radius: 10px;
 }
 #btn:hover{
     transition-duration: 100ms;
