@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Bangers');
+body{
+    background-color: #333;
+}
+button {
+    all: unset;
+}
+a:focus,
+.focus a {
+	outline: none !important;
+}
+a {
+    outline: 0;
+ }
 .loader {
     display: none;
     border: 16px solid #f3f3f3;
@@ -10,8 +24,8 @@
 }
 #myImage{
     image-rendering: crisp-edges; 
-    width: 200px; 
-    height: 200px; 
+    width: 300px; 
+    height: 300px; 
     display: block; 
     margin-left: auto; 
     margin-right: auto;
@@ -21,6 +35,24 @@
     margin-top: 100px;
     width: 100%; 
     text-align: center;
+}
+#title{
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    width: 100%;
+    color: white;
+}
+#btn{
+    transition-duration: 100ms;
+    font-family: 'Bangers', cursive;
+    font-size: 50px;
+    background-color: none;
+    cursor: pointer;
+    color: white;
+}
+#btn:hover{
+    transition-duration: 100ms;
+    font-size: 60px;
 }
   /* Safari */
 @-webkit-keyframes spin {
