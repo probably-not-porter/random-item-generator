@@ -1,3 +1,5 @@
+
+
 // Set up the image files to be used.
 var theImages = new Array() // do not change this
 // To add more image files, continue with the
@@ -505,6 +507,8 @@ theImages[495] = 'images/A_Armor04.png';
 
 
 function showImage(){
+    document.getElementById('load').style.display = "block";
+    document.getElementById('myImage').style.display = "none";
     var j = 0
     var p = theImages.length;
     var preBuffer = new Array()
@@ -514,4 +518,6 @@ function showImage(){
     }
     var whichImage = Math.round(Math.random()*(p-1));
     document.getElementById('myImage').src=theImages[whichImage];
+    document.getElementById('load').style.display = "none";
+    document.getElementById('myImage').style.display = "block";
 }
