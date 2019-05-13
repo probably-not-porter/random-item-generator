@@ -504,6 +504,18 @@ theImages[495] = 'images/A_Armor04.png';
 
 // do not edit anything below this line
 
+function createMod(){
+    var mod1 = Math.round(Math.random()*(10)) - 3;
+    var mods = ["DEX", "STR", "INT", "WIS", "CHA", "Initiative", "Speed", "Armor"];
+    var mod2 = Math.round(Math.random()*(mods.length));
+    var modstr = ""
+    if (mod1 > -1)
+    {
+        modstr += "+"
+    }
+    modstr += mod1.toString() + " " + mods[mod2];
+    return modstr
+}
 
 
 function showImage(){
@@ -515,19 +527,11 @@ function showImage(){
         preBuffer[i].src = theImages[i]
     }
     var whichImage = Math.round(Math.random()*(p-1));
-    var mod1 = Math.round(Math.random()*(10)) - 3;
-    
-    var mods = ["DEX", "STR", "INT", "WIS", "CHA", "Initiative", "Speed", "Armor"];
-    var mod2 = Math.round(Math.random()*(mods.length));
-
-    var modstr = ""
-    if (mod1 > -1)
+    modstr = createMod() 
+    while (Math.round(Math.random()*(3)) == 1)
     {
-        modstr += "+"
+        modstr += ", " + createMod();
     }
-    
-    modstr += mod1.toString() + " " + mods[mod2];
-
     
     document.getElementById('myImage').src=theImages[whichImage];
     document.getElementById("title").textContent = modstr;
