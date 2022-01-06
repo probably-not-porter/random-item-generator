@@ -516,6 +516,13 @@ function createMod(){
     modstr += mod1.toString() + " " + mods[mod2];
     return modstr
 }
+function createDMG(){
+    dmg = "";
+    dice = ["d4", "d4", "d6", "d6", "d6", "d6", "d8", "d8", "d10", "d10", "d12"]
+    amt = [1,1,1,1,2,2,2,2,2,3,3,4,5]
+    dmg = amt[Math.floor(Math.random()*amt.length)] + "x " + dice[Math.floor(Math.random()*dice.length)] + " damage"
+    return dmg
+}
 
 
 function showImage(){
@@ -534,5 +541,12 @@ function showImage(){
     }
     
     document.getElementById('myImage').src=theImages[whichImage];
-    document.getElementById("title").textContent = modstr;
+    if (Math.round(Math.random()*(3)) == 1)
+    {
+        document.getElementById("title").textContent = modstr + "\n" + createDMG();
+    }
+    else{
+        document.getElementById("title").textContent = modstr;
+    }
+    
 }
