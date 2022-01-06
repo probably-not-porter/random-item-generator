@@ -507,7 +507,7 @@ theImages[495] = 'images/A_Armor04.png';
 function createMod(){
     var mod1 = [1,1,1,1,1,1,1,2,2,2,2,2,2,3,3,4,4,5][Math.floor(Math.random()*18)]
     var mods = ["DEX", "STR", "INT", "WIS", "CHA", "Initiative", "Speed", "Armor"];
-    var mod2 = Math.round(Math.random()*(mods.length));
+    var mod2 = Math.floor(Math.random()*(mods.length));
     var modstr = ""
     if (mod1 > -1)
     {
@@ -520,7 +520,7 @@ function createDMG(){
     dmg = "";
     dice = ["d4", "d4", "d6", "d6", "d6", "d6", "d8", "d8", "d10", "d10", "d12"]
     amt = [1,1,1,1,2,2,2,2,2,3,3,4,5]
-    dmg = amt[Math.floor(Math.random()*amt.length)] + "x " + dice[Math.floor(Math.random()*dice.length)] + " damage"
+    dmg = amt[Math.floor(Math.random()*amt.length-1)] + "x " + dice[Math.floor(Math.random()*dice.length)] + " damage"
     return dmg
 }
 
