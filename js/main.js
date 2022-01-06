@@ -505,7 +505,7 @@ theImages[495] = 'images/A_Armor04.png';
 // do not edit anything below this line
 
 function createMod(){
-    var mod1 = Math.round(Math.random()*(10)) - 3;
+    var mod1 = [1,1,1,1,1,1,1,2,2,2,2,2,2,3,3,4,4,5][Math.floor(Math.random()*18)]
     var mods = ["DEX", "STR", "INT", "WIS", "CHA", "Initiative", "Speed", "Armor"];
     var mod2 = Math.round(Math.random()*(mods.length));
     var modstr = ""
