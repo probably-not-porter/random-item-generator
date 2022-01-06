@@ -46,7 +46,7 @@ a {
     animation: spin 2s linear infinite;
 }
 #myImage{
-    image-rendering: crisp-edges; 
+    image-rendering: pixelated; 
     width: 300px; 
     height: 300px; 
     display: block; 
