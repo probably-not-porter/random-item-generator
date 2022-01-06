@@ -543,7 +543,7 @@ function showImage(){
     document.getElementById('myImage').src=theImages[whichImage];
     if (Math.round(Math.random()*(3)) == 1)
     {
-        document.getElementById("title").textContent = modstr + "\n" + createDMG();
+        document.getElementById("title").innerHTML = modstr + '<br>' + createDMG();
     }
     else{
         document.getElementById("title").textContent = modstr;
